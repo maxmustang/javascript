@@ -16,3 +16,14 @@
 
 // Composition is more like lego blocks. Various pirces aren't desinged to fit with any specific piece.
   // Instead, they are all designed to fit together with any other piece, with few exceptions
+
+// PAGE 51
+// Fluent-Style Javascript:
+//   forgetting to use the `new` keyword in Javascript for the constructor invocation pattern will pass the global object
+//   in the function to `this`. With the strict-mode on, if I forget the `new`, the `this` will became useless, and
+//   when it try to assign variable, will thrown an error
+//
+// Dynamic Object Extensions
+//   I can add propetis to ANY object in Javascript after the instantiation
+//
+// Prototypal Inheritance

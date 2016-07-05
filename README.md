@@ -1,1 +1,1 @@
-# repository to my javascript studies 
+# repository for my javascript studies 
