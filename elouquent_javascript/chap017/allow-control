@@ -1,0 +1,4 @@
+Access-Control-Allow-Origin: *
+
+Must be setted in the server, and its tells the browser that is ok to receive
+requests from other domains

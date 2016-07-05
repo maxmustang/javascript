@@ -1,0 +1,19 @@
+Two script at the same document will never run at the same moment
+Browsers provide a web worker that provides the functionality to do more than
+one thing at the time
+
+Web Workers is a isolated javascript env that runs alongside tha main program and can
+comunicate with it only sending and receiving messages
+
+"code/squareworker.js"
+addEventListener("message", function(event) { //complicated stuff that take a lot of time
+    postMessage(event.data * event.data);
+}); 
+
+
+var squareWorker = new Worker("code/squareworker.js");
+squareWorker.addEventListener("message", function(event) {
+    console.log("The worker responded:", event.data);
+});
+squareWorker.postMessage(10);
+squareWorker.postMessage(24);

@@ -1,0 +1,19 @@
+<!<!DOCTYPE>
+
+<script>
+
+function makeRequest(type ) {
+    var request = new XMLHttpRequest();
+    request.open("GET", "http://eloquentjavascript.net/author", true)
+    request.setRequestHeader("Accept", type)
+    request.addEventListener("load", function(){
+        console.log(request.responseText)
+    })
+    request.send(null)
+}
+    
+    makeRequest("application/json")
+    makeRequest("text/plain")
+    makeRequest("application/rainbows+unicorns")
+    
+</script>

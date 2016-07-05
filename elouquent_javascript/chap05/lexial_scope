@@ -1,0 +1,11 @@
+lexial scope is when a property of a outer function live in the inner function.
+All properties of a outer function continue private, the scope of the outer function live in the inner function.
+Keeping then private to the outer world
+
+function(a) {
+    var b = a + 1
+    function getB() {
+        console.log('b represents: ', a, '+ 1) 
+        return b
+    }
+}

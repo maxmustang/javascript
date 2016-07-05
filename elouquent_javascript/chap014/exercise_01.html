@@ -1,0 +1,12 @@
+<input type="text"></input>
+
+
+<script>
+    var i = document.querySelector('input')
+    
+    i.addEventListener('keypress', function(event) {
+        if(event.charCode === 120 || event.charCode === 113 || event.charCode ===119){
+            event.preventDefault()
+        }
+    })   
+</script>

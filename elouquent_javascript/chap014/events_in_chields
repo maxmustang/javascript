@@ -1,0 +1,4 @@
+Events handlers registreds in both node and parent will receive some of the events
+that are registered in the chield
+For example, if a button inside a paragrapher is clicked and both has registred the click events
+both will execute the events. But the more especific will always execute first( in this case the button)

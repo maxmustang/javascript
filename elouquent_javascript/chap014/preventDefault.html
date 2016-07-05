@@ -1,0 +1,10 @@
+<p>
+   the method preventDefault stops the execution of a default event linked to an element
+</p>
+<a href="https://developer.mozilla.org/">MDN</a>
+<script>
+    document.querySelector('a').addEventListener('click', function(element) {
+        element.preventDefault()
+        console.log("nops!")
+    })    
+</script>

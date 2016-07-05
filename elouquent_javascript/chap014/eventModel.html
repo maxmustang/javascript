@@ -1,0 +1,17 @@
+<html>
+    <head></head>
+    <body>
+        
+        <button> click </button>
+        <p> Every event contains in its callback function an Event Model
+        </p>
+        <script>
+            
+            var button = document.querySelector("button")
+            button.addEventListener("click", function(event) {
+                console.log("-------> ", event)
+                alert("look at the console!!!")
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,53 @@
+Functions
+    Method Invocation Pattern
+        Quando uma function é associada a uma propriedade de um objeto ela vira um metodo, quando o metodo é invocado
+        o THIS do objeto automaticamente é inserido ao contexto da function, tornando-se assim o seu THIS.
+        O bind do THIS do objeto para a function ocorre em tempo de invocação
+            
+            var obj = {
+                value:0,
+                add: function(i) { 
+                    this.value += typeof inc === 'number' ? inc : 1
+                }
+            }
+            
+    Function Invocation Pattern
+        Quando uma function nao é uma propriedade/metodo de um objeto, logo é apenas uma function
+        Quando uma function é invocada com esse pattern, o bind do THIS da function é feito com o objeto global, o resultado disso é que um metodo
+        nao pode criar uma inner function para ajuda-lo a fazer o seu trabalho, pq o THIS que fez o bind com a inner function NÃO É o THIS
+        da function que criou essa inner function
+            
+            function add(a,b) {
+                return a + b
+            }
+            var sum = add(1,2) //3
+            
+            obj.double = function() { 
+                var that = this;
+                var helper = function(){ //javascript design problem
+                    console.log(this)
+                    that.value = add(that.value, that.value)
+                }
+                helper()
+            }
+            
+     Construtor Invocation Pattern
+        Se uma function é invocada com NEW, então um novo objeto ira ser criado com um hidden link para o valor
+        do function prototype memberm e o THIS sera BOUNDED para este novo objeto
+        
+        var Quo = function(status){
+            this.status = status
+        }
+        
+     Apply Invocation Pattern
+        .apply nos permite inserir um array de argumentos ao metodo e ainda possibilita que informemos qual o THIS
+        relativo aquele metodo que estamos tentando invocar 
+        
+         var Quo = function(status){
+            this.status = status
+        }
+        Quo.prototype.get_status = function () { return this.status }
+        var a = {status: 't' }
+        Quo.prototype.get_status.apply(a) // caso recebesse parametros, .apply(a, [..])
+        
+    

@@ -1,0 +1,53 @@
+High-Order functions:
+    functions that operate on other functios, either by taking them as arguments or by returning then.
+    High-Order functions allow us to abstract over actions, not just values
+    
+    
+    
+    #       A FUNCTION THAT CREATES ANOTHER FUNCTION
+    
+    function greaterThan(n) {
+        return function(m) { return m > n }
+    }
+    
+    var greaterThan10 = greaterThan(10)
+    greaterThan10(11)
+    
+    // var greaterThan = (n) => (m) => m > n
+    // greaterThan(10)(12)
+    
+
+    
+    ----------------------------------
+    Abstractic over actions
+    
+    function noisy(f) {
+        return function(arg) {
+            console.log(f, ' handling with: ', arg)
+            return f(arg)
+       }  
+    }
+    
+    console.log(noise(String, 'max')) ===> "Max"
+    
+     
+    let unless(test, then){
+        if(!test) then() 
+    }
+    
+    let repeat(times, body) {
+        for(let i = 0; i < times; i++) body(i) 
+    }
+    
+    let printEven = function(i) {
+        console.log(i, ' is even')
+    }
+   
+    repeat(3, printEven)
+    
+    
+   
+  High-Order functions start to shine when we need to compose functions
+    
+    
+    

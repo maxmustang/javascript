@@ -1,0 +1,24 @@
+<html>
+    <head></head>
+    <body>
+        
+        <button> click </button>
+        <p> The difference between add a onclick event to a the button as
+            onclick="" and add a eventListner<br> is that, I can put as many
+            events that I want. <br>
+            
+            And we can use removeEventListner for remove one of then
+        </p>
+        <script>
+            
+            var button = document.querySelector("button")
+            button.addEventListener("click", function() {
+                alert('clicked')
+            })
+            
+            button.addEventListener("click", function() {
+                alert('Both events on the same click')
+            })
+        </script>
+    </body>
+</html>

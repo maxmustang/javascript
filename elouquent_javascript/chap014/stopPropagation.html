@@ -1,0 +1,22 @@
+<html>
+    <head></head>
+    <body>
+        <p> a paragrapher with a <button>button</button> </p>
+        <script>
+            
+           var p = document.querySelector("p")
+           var button = document.querySelector('button')
+           
+           p.addEventListener('mousedown', function() {
+               console.log('handler mouse down')
+           })
+           
+           button.addEventListener('mousedown', function(event) {
+               console.log('handler mouse down for the button') 
+               if(event.which === 3) { //right button
+                   event.stopPropagation()
+               }
+           })
+        </script>
+    </body>
+</html>

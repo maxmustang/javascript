@@ -1,0 +1,14 @@
+<!DOCTYPE>
+the responseXML will be treated as the document
+
+an example of the usage will be
+req.responseXML.querySelectorAll("fruit")
+
+as the document element
+
+<script>
+    var req = new XMLHttpRequest();
+    req.open("GET", "fruits.xml", false);
+    req.send(null); 
+    console.log(req.responseXML.querySelectorAll("fruit").length);
+</script>

@@ -1,0 +1,15 @@
+two things that javascript give two us
+    prototypal inheritance
+        Objects without classes and prototype delegation -> OLOO(objects linking other objects)
+    functional programming
+        enabled by lambda and closure
+        
+Javascript expose this two increrible features of programming.
+# open/closed principle, classes.. objects and functions should be open for extensions but closed for modification
+
+if I return an arbitrary object from a constructor function it will break the link and the 'this' keyword will no longer
+be bound to the new object instanciated by the constructor, but to the global scope
+
+factory function are the simply way to construct a new object without the 'new' keyword
+Javascript doesnt need the construct function cause any function can return a new object. With dynamic
+object extension, the new behaving like in any other function
