@@ -22,9 +22,11 @@ test('Prototype clones', t => {
   t.true(s1.toggle().isOn())
   t.false(s2.isOn())
 
+  //objects and array mutations are shared
   s2.meta.name = 'Winds of the winter'
   t.equal('Winds of the winter', s1.meta.name)
   t.equal('Winds of the winter', s2.meta.name)
+  //property replacement is instance-specific
   s2.meta = { name: 'Hardhome'}
   t.equal('Hardhome', s2.meta.name)
   t.end()

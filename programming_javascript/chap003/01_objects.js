@@ -1,4 +1,4 @@
-// Cause javascript is classless, nad it is possible to create an object on demand at the precise moment
+// Cause javascript is classless, it is possible to create an object on demand at the precise moment
 // it's needed(lazy initialization), the singleton is reduced to an object literal
 //js object
   var highlander = {
@@ -14,7 +14,7 @@
   //Inheritance exposes the parent class to all child classes. The child classes are all programming to an
   // implementation, not an interface
 
-// Composition is more like lego blocks. Various pirces aren't desinged to fit with any specific piece.
+// Composition is more like lego blocks. Various pieces aren't desinged to fit with any specific piece.
   // Instead, they are all designed to fit together with any other piece, with few exceptions
 
 // PAGE 51
@@ -24,6 +24,6 @@
 //   when it try to assign variable, will thrown an error
 //
 // Dynamic Object Extensions
-//   I can add propetis to ANY object in Javascript after the instantiation
+//   I can add propeties to ANY object in Javascript after the instantiation
 //
 // Prototypal Inheritance

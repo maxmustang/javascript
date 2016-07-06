@@ -5,8 +5,8 @@
 // That tries to find a property in the `fathers prototype` until Object-Prototype or by cloning this prototype
 //
 // Delegate Prototypes
-//   When I call a method or property in the object, the js engine will try get this property on the own object
-//   if cant find it, it will try to find in the object-prototype so on, until get to the end of the chain
+//   When I call a method or property in the object, the javascript engine will try get this property on the own object
+//   if can't find it, it will try to find in the object-prototype so on, until get to the end of the chain
 //   the prototype called Object
 //   The first prototype of object will be Object Prototype, I can specify the prototype that will be settled to the object
 //   using the Object.create() method
