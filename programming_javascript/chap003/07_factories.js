@@ -52,8 +52,11 @@ const car = function car(color, direction, mph) {
 }
 //adding encapsulation thought closures
 const myCar = car('a', 0, 5)
+const c2 = car()
 test('Factory with private variable', t => {
   t.ok(myCar.color, 'has a color')
+  c2.color = 'max'
+  t.notEqual(myCar.color, 'max')
   t.equal(myCar.gas().mph, 10, '.accelerate() should add 10')
   t.equal(myCar.brake(5).mph, 5, '.brak(5) should subtract 5')
   t.true(myCar.toggleParkingBrake().isParked(), '.toggleParkingBrake works') //encapsulation
@@ -86,6 +89,8 @@ const carPrototype = {
 //Singleton
 //mixing assign with create
 // create a Object point to carPrototype as prototype and copyng all the value from `options` to the object itself
+
+//TODO: Implement data privacy with factory
 const carPrototypeFactory = options => Object.assign(Object.create(carPrototype), options)
 
 const newCar = carPrototypeFactory({color: 'blue'})

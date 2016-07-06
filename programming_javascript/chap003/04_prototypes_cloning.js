@@ -16,6 +16,10 @@ let switchProto = {
 let s1 = Object.assign({}, switchProto)
 let s2 = Object.assign({}, switchProto)
 
+// with object.assign the properties of the prototype will be copied to the child object
+// instead of been shared
+console.log(s1, '===> ', s2)
+
 test('Prototype clones', t => {
   s1.isOn.isShared = true
   t.false(s2.isShared, 'Methods are copied, not shared between data')
