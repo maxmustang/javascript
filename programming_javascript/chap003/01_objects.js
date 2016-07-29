@@ -1,4 +1,4 @@
-// Cause javascript is classless, it is possible to create an object on demand at the precise moment
+// Cause javascript is classless, and it is possible to create an object on demand at the precise moment
 // it's needed(lazy initialization), the singleton is reduced to an object literal
 //js object
   var highlander = {
